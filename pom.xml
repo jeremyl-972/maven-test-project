@@ -18,6 +18,14 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
+  <distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>leopold.solutions-snapshots</name>
+        <url>https://leopold.solutions/artifactory/hello-world-libs-snapshot</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
