@@ -7,7 +7,7 @@ public class App
     {
 	String message = "Hello World!";
         System.out.println(message);
-        String[] words = {"Hello", "Maven", "Guava"};
+        String[] words = {"Hello", "Maven", "Guava", "test"};
         String joinedWords = Joiner.on(" ").join(words);
         System.out.println(joinedWords);	
     }
