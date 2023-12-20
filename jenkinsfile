@@ -36,4 +36,13 @@ node {
     stage ('Publish build info') {
         server.publishBuildInfo buildInfo
     }
+    stage ('Xray scan') {
+        def scanConfig = [
+                'buildName'      : buildInfo.name,
+                'buildNumber'    : buildInfo.number,
+                'failBuild'      : true
+        ]
+        def scanResult = server.xrayScan scanConfig
+        echo scanResult as String
+    }
 }
