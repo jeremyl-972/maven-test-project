@@ -22,7 +22,7 @@
     <snapshotRepository>
         <id>snapshots</id>
         <name>leopold.solutions-snapshots</name>
-        <url>https://leopold.solutions/artifactory/hello-world-libs-snapshot</url>
+        <url>https://leopold.solutions/artifactory/voyagers-libs-snapshot</url>
     </snapshotRepository>
   </distributionManagement>
 
