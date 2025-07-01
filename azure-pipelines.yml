@@ -10,13 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Maven@3
+- task: JFrogMaven@1
   inputs:
     mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
+    goals: 'install'
+    artifactoryResolverService: 'rt-v2'
+    targetResolveReleaseRepo: 'jl-libs-release'
+    targetResolveSnapshotRepo: 'jl-libs-snapshot'
+    artifactoryDeployService: 'rt-v2'
+    targetDeployReleaseRepo: 'jl-libs-release'
+    targetDeploySnapshotRepo: 'jl-libs-snapshot'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
